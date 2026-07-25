@@ -2,14 +2,14 @@
 %define upstream_version 0.06
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/S/SH/SHAWNPW/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:        https://metacpan.org/dist/PostScript
+Source0:	https://cpan.metacpan.org/authors/id/S/SH/SHAWNPW/PostScript-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
