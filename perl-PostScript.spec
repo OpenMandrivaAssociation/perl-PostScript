@@ -1,15 +1,13 @@
 %define upstream_name	 PostScript
-%define upstream_version 0.06
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.06
+Release:	6
 
 Summary:	%{upstream_name} module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        https://metacpan.org/dist/PostScript
-Source0:	https://cpan.metacpan.org/authors/id/S/SH/SHAWNPW/PostScript-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SH/SHAWNPW/PostScript-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 This is the %{upstream_name} module for perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -40,9 +38,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2010.0
 + Revision: 404350
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.06-5mdv2009.0
+- rebuild using %0.06 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.06-5mdv2009.0
 + Revision: 241844
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
